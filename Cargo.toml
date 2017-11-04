@@ -12,6 +12,7 @@ keywords = ["binary", "patch", "hex", "patcher"]
 categories = ["encoding", "filesystem", "text-processing"]
 
 license = "MIT"
+readme = "README.md"
 
 include = [
     "**/*.rs",
@@ -19,7 +20,7 @@ include = [
 ]
 
 [badges]
-travis-ci = { repository = "https://github.com/hiseni/binpatch", branch = "master" }
+travis-ci = { repository = "hiseni/binpatch", branch = "master" }
 maintenance = { status = "experimental" }
 
 [dependencies]
