@@ -3,9 +3,27 @@ authors = ["Bogdan Arabadzhi <bogdan.today@gmail.com>"]
 name = "binpatch"
 version = "0.1.0"
 
+documentation = "https://docs.rs/binpatch"
+homepage = "https://github.com/hiseni/binpatch"
+repository = "https://github.com/hiseni/binpatch"
+
+keywords = ["binary", "patch", "hex", "patcher"]
+categories = ["encoding", "filesystem", "text-processing"]
+
+license = "MIT"
+
+include = [
+    "**/*.rs",
+    "Cargo.toml",
+]
+
+[badges]
+travis-ci = { repository = "https://github.com/hiseni/binpatch", branch = "master" }
+maintenance = { status = "experimental" }
+
 [dependencies]
 data-encoding = "2.0.0-rc.2"
-clippy = {version = "*", optional = true}
+clippy = { version = "*", optional = true }
 
 [features]
 default = []
