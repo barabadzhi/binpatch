@@ -1,6 +1,7 @@
 [package]
 authors = ["Bogdan Arabadzhi <bogdan.today@gmail.com>"]
 name = "binpatch"
+description = "Simple hex binary patcher library"
 version = "0.1.0"
 
 documentation = "https://docs.rs/binpatch"
