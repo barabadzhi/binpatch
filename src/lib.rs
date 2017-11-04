@@ -30,6 +30,12 @@ impl<'a> Patch<'a> {
     }
 
     pub fn replace(&mut self, from: &'a [u8], to: &'a [u8]) -> &mut Patch<'a> {
+        assert_eq!(
+            from.len(),
+            to.len(),
+            "replase arguments, `to` and `from`, should have the same length"
+        );
+
         self.pairs.push(PatchPair { from, to });
         self
     }
