@@ -1,0 +1,22 @@
+language: rust
+rust:
+  - stable
+  - beta
+  - nightly
+os:
+  - linux
+  - osx
+cache: cargo
+branches:
+  only:
+    - master
+install: true
+script:
+  - if [ "$TRAVIS_RUST_VERSION" = "nightly" ]; then
+      cargo build --features "clippy";
+    else
+      cargo test;
+    fi
+matrix:
+  allow_failures:
+    - rust: nightly

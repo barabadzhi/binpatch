@@ -5,3 +5,7 @@ version = "0.1.0"
 
 [dependencies]
 data-encoding = "2.0.0-rc.2"
+clippy = {version = "*", optional = true}
+
+[features]
+default = []
