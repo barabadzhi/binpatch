@@ -1,7 +1,8 @@
-#![cfg_attr(feature="clippy", feature(plugin))]
-#![cfg_attr(feature="clippy", plugin(clippy))]
+#![cfg_attr(feature = "clippy", feature(plugin))]
+#![cfg_attr(feature = "clippy", plugin(clippy))]
 
 extern crate data_encoding;
+extern crate rayon;
 
 #[derive(Debug, Default, PartialEq)]
 pub struct Patch<'a> {
@@ -43,6 +44,7 @@ impl<'a> Patch<'a> {
         use std::fs::File;
 
         use data_encoding::HEXUPPER;
+        use rayon::prelude::*;
 
         if let Some(ref file) = self.file {
             let mut buffer = Vec::new();
@@ -53,11 +55,11 @@ impl<'a> Patch<'a> {
                 let from = HEXUPPER.decode(pair.from).unwrap();
                 let to = HEXUPPER.decode(pair.to).unwrap();
 
-                for chunk in buffer.chunks_mut(from.len()) {
-                    if chunk == from.as_slice() {
+                buffer
+                    .par_chunks_mut(from.len())
+                    .for_each(|chunk| if chunk == from.as_slice() {
                         chunk.copy_from_slice(&to);
-                    }
-                }
+                    });
             }
 
             if let Some(ref output) = self.output {

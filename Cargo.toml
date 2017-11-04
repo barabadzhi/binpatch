@@ -1,31 +1,43 @@
 [package]
 authors = ["Bogdan Arabadzhi <bogdan.today@gmail.com>"]
-name = "binpatch"
+categories = [
+    "encoding",
+    "filesystem",
+    "text-processing",
+]
 description = "Simple hex binary patcher library"
-version = "0.1.1"
-
 documentation = "https://docs.rs/binpatch"
 homepage = "https://github.com/hiseni/binpatch"
-repository = "https://github.com/hiseni/binpatch"
-
-keywords = ["binary", "patch", "hex", "patcher"]
-categories = ["encoding", "filesystem", "text-processing"]
-
-license = "MIT"
-readme = "README.md"
-
 include = [
     "**/*.rs",
     "Cargo.toml",
 ]
+keywords = [
+    "binary",
+    "patch",
+    "hex",
+    "patcher",
+]
+license = "MIT"
+name = "binpatch"
+readme = "README.md"
+repository = "https://github.com/hiseni/binpatch"
+version = "0.1.1"
 
-[badges]
-travis-ci = { repository = "hiseni/binpatch", branch = "master" }
-maintenance = { status = "experimental" }
+[badges.maintenance]
+status = "experimental"
+
+[badges.travis-ci]
+branch = "master"
+repository = "hiseni/binpatch"
 
 [dependencies]
 data-encoding = "2.0.0-rc.2"
-clippy = { version = "0.0.168", optional = true }
+rayon = "0.8.2"
+
+[dependencies.clippy]
+optional = true
+version = "0.0.168"
 
 [features]
 default = []
