@@ -1,4 +1,7 @@
 # binpatch
+
+[![Build Status](https://travis-ci.org/hiseni/binpatch.svg?branch=master)](https://travis-ci.org/hiseni/binpatch)
+
 Binary patching for Rust
 
 
