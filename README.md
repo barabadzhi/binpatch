@@ -1,6 +1,11 @@
-# binpatch
+# binpatch [![Build Status]][travis] [![Latest Version]][crates.io] [![Maintenance]][repo]
 
-[![Build Status](https://travis-ci.org/hiseni/binpatch.svg?branch=master)](https://travis-ci.org/hiseni/binpatch)
+[Build Status]: https://travis-ci.org/hiseni/binpatch.svg?branch=master
+[travis]: https://travis-ci.org/hiseni/binpatch
+[Latest Version]: https://img.shields.io/crates/v/binpatch.svg
+[crates.io]: https://crates.io/crates/binpatch
+[Maintenance]: https://img.shields.io/badge/maintenance-experimental-blue.svg
+[repo]: https://github.com/hiseni/binpatch
 
 Binary patching for Rust
 
