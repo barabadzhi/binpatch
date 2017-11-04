@@ -24,7 +24,7 @@ maintenance = { status = "experimental" }
 
 [dependencies]
 data-encoding = "2.0.0-rc.2"
-clippy = { version = "*", optional = true }
+clippy = { version = "0.0.168", optional = true }
 
 [features]
 default = []
